@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scraps</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="download (2).png">
+    <title>Celery Space-Themed Site</title>
     <style>
-        /* General Page Styles */
+        /* General Styling */
         * {
             margin: 0;
             padding: 0;
@@ -20,116 +18,130 @@
             background-size: cover;
             color: #ffffff;
             text-align: center;
+            overflow: hidden;
+            font-size: 16px;
+        }
+
+        /* Container Styling */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         h1 {
-            margin: 20px 0;
-            font-size: 3rem;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 4px #000;
+            font-size: 5rem;
+            text-transform: lowercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px #000000;
         }
 
         p {
-            font-size: 1.2rem;
-            color: #ddd;
-            margin-bottom: 20px;
+            margin: 20px 0;
+            font-size: 1rem;
+            color: #c2c2c2;
         }
 
-        /* Scraps Container */
-        .scraps-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .scrap-item {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
-            width: 300px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .scrap-item:hover {
-            transform: scale(1.05);
-        }
-
-        .scrap-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 6px;
-            margin-bottom: 10px;
-        }
-
-        .scrap-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-        }
-
-        .scrap-item p {
-            font-size: 0.9rem;
-            color: #ccc;
-        }
-
-        /* Back Button */
-        .back-btn {
+        .buttons a {
             display: inline-block;
-            margin: 20px;
+            margin: 10px 15px;
             padding: 10px 20px;
             background-color: rgba(0, 0, 0, 0.7);
-            color: #ffffff;
+            color: #fff;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
 
-        .back-btn:hover {
+        .buttons a:hover {
             background-color: #4caf50;
+        }
+
+        /* Floating Stars Animation */
+        @keyframes floatStars {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: floatStars 5s infinite;
+        }
+
+        /* Star Positions */
+        .star:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            animation-duration: 4s;
+        }
+
+        .star:nth-child(2) {
+            top: 30%;
+            left: 40%;
+            animation-duration: 6s;
+        }
+
+        .star:nth-child(3) {
+            top: 50%;
+            left: 70%;
+            animation-duration: 8s;
+        }
+
+        .star:nth-child(4) {
+            top: 80%;
+            left: 60%;
+            animation-duration: 5s;
+        }
+
+        .star:nth-child(5) {
+            top: 70%;
+            left: 10%;
+            animation-duration: 7s;
         }
     </style>
 </head>
 <body>
-    <h1>Scraps</h1>
-    <p>A collection of jokes, photos, and random things.</p>
-
-    <div class="scraps-container">
-        <!-- Placeholder Scrap Items -->
-        <div class="scrap-item">
-            <img src="Screenshot 2024-11-29 151054.png" alt="Placeholder Image">
-            <h3>Photo #1</h3>
-            <p>Just a placeholder photo for now.</p>
-        </div>
-        <div class="scrap-item">
-            <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
-            <h3>Random Joke</h3>
-            <p>Why don’t skeletons fight each other? They don’t have the guts!</p>
-        </div>
-        <div class="scrap-item">
-            <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
-            <h3>Photo #2</h3>
-            <p>Another placeholder image goes here.</p>
-        </div>
-        <div class="scrap-item">
-            <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
-            <h3>Photo #3</h3>
-            <p>Yet another placeholder image to fill the page.</p>
-        </div>
-        <div class="scrap-item">
-            <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
-            <h3>Funny Thought</h3>
-            <p>“I told my computer I needed a break, and it froze.”</p>
-        </div>
-        <div class="scrap-item">
-            <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
-            <h3>Random Fun</h3>
-            <p>A funny or interesting caption here.</p>
+    <div class="content">
+        <h1>celery</h1>
+        <p>Download Celery, the #1 script!</p>
+        <div class="buttons">
+            <a href="./files.html">files</a>
+            <a href="./scraps.html">scraps</a>
+            <a href="./utilities.html">utilites</a>
         </div>
     </div>
 
-    <a href="index.html" class="back-btn">Go Back</a>
+    <!-- Floating Stars -->
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
 </body>
 </html>
