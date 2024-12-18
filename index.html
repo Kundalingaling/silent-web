@@ -12,6 +12,7 @@
             background-color: #000;
             color: #fff;
             text-align: left;
+            overflow: hidden;
         }
         .container {
             display: flex;
@@ -29,11 +30,29 @@
             font-style: italic;
             margin: 0 0 20px 20px;
         }
+        .sections {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            gap: 5px;
+        }
         .section {
+            flex: 1;
+            display: flex;
+            align-items: center;
             padding: 20px;
             text-transform: lowercase;
             font-size: 20px;
             color: #fff;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .section:hover {
+            flex: 1.5;
+            font-size: 24px;
+        }
+        .section:hover ~ .section {
+            transform: translateY(20px);
         }
         .files { background-color: #f9a825; }
         .github { background-color: #ff5722; }
@@ -44,17 +63,15 @@
 </head>
 <body>
     <div class="container">
-        <div class="subtitle">"sic itur ad astra"</div>
+        <div class="subtitle">jedyny błōnd kosmosu je to, jak ci nazwali</div>
         <div class="title">silentskiess</div>
-        <div class="section files">files.</div>
-        <div class="section github">github.</div>
-        <div class="section pgp">pgp key.</div>
-        <div class="section email">email.</div>
-        <div class="section tools">tools.</div>
+        <div class="sections">
+            <div class="section files">files.</div>
+            <div class="section github">github.</div>
+            <div class="section pgp">pgp key.</div>
+            <div class="section email">email.</div>
+            <div class="section tools">tools.</div>
+        </div>
     </div>
-</body>
-</html>
-
-    <div class="bar"><span>tools</span></div>
 </body>
 </html>
