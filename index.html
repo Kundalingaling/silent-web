@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sliding UI</title>
+    <title>Sliding UI - Up-Down Animation</title>
     <style>
         /* General Reset */
         * {
@@ -51,14 +51,14 @@
             max-width: 600px;
             margin: 5px 0;
             position: relative;
-            transform: translateX(-100%);
-            animation: slide-in 1s forwards;
+            transform: translateY(-100%); /* Bars start above */
+            animation: slide-down 1s forwards;
         }
 
-        /* Keyframes for the slide animation */
-        @keyframes slide-in {
+        /* Keyframes for the up-down slide animation */
+        @keyframes slide-down {
             to {
-                transform: translateX(0);
+                transform: translateY(0);
             }
         }
 
@@ -84,8 +84,7 @@
         }
 
         .bar:nth-child(5) {
-            background-color: #8E2354; /* tools */
-            animation-delay: 3s;
+            animation-delay: 3s; /* No background, so it stays invisible */
         }
 
         /* Text Inside Bars */
@@ -95,6 +94,7 @@
             left: 10px;
             transform: translateY(-50%);
             font-size: 1.2rem;
+            z-index: 2;
         }
     </style>
 </head>
@@ -110,6 +110,6 @@
     <div class="bar"><span>github.</span></div>
     <div class="bar"><span>pgp key.</span></div>
     <div class="bar"><span>email.</span></div>
-    <div class="bar"><span>tools.</span></div>
+    <div class="bar"><span>tools</span></div>
 </body>
 </html>
