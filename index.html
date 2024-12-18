@@ -18,41 +18,43 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 100vh;
+            height: 85vh; /* Shorter overall height */
+            margin: 0 auto;
+            max-width: 600px; /* Set a max width for compact layout */
         }
         .title {
-            font-size: 96px;
+            font-size: 72px; /* Smaller title */
             font-weight: bold;
-            margin: 0 0 20px 20px;
+            margin: 0 0 10px 10px;
         }
         .subtitle {
-            font-size: 24px;
+            font-size: 18px; /* Smaller subtitle */
             font-style: italic;
-            margin: 0 0 20px 20px;
+            margin: 0 0 10px 10px;
         }
         .sections {
             display: flex;
             flex-direction: column;
-            height: 100%;
-            gap: 5px;
+            gap: 3px;
         }
         .section {
             flex: 1;
             display: flex;
             align-items: center;
-            padding: 20px;
+            justify-content: flex-start;
+            padding: 10px 20px; /* Smaller padding */
             text-transform: lowercase;
-            font-size: 20px;
+            font-size: 18px; /* Smaller font size */
             color: #fff;
             transition: all 0.3s ease;
             cursor: pointer;
         }
         .section:hover {
-            flex: 1.5;
-            font-size: 24px;
+            flex: 1.3;
+            font-size: 20px;
         }
         .section:hover ~ .section {
-            transform: translateY(20px);
+            transform: translateY(10px); /* Reduced translate distance */
         }
         .files { background-color: #f9a825; }
         .github { background-color: #ff5722; }
@@ -75,3 +77,4 @@
     </div>
 </body>
 </html>
+
