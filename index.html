@@ -3,113 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sliding UI - Up-Down Animation</title>
+    <title>silentskiess</title>
+    <link rel="icon" href="silentcover.png" type="image/png">
     <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
             background-color: #000;
             color: #fff;
-            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+        .container {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
             height: 100vh;
-            overflow: hidden;
         }
-
-        /* Header and Title */
-        h1, h2 {
-            margin: 0;
-            padding-left: 10px;
-        }
-
-        .header {
-            margin-bottom: 20px;
-        }
-
-        .header h1 {
-            font-size: 5rem;
+        .title {
+            font-size: 96px;
             font-weight: bold;
+            margin: 0 0 20px 20px;
         }
-
-        .header h2 {
+        .subtitle {
+            font-size: 24px;
             font-style: italic;
-            font-size: 1.5rem;
+            margin: 0 0 20px 20px;
         }
-
-        /* Color Bars */
-        .bar {
-            height: 60px;
-            width: 100%;
-            max-width: 600px;
-            margin: 5px 0;
-            position: relative;
-            transform: translateY(-100%); /* Bars start above */
-            animation: slide-down 1s forwards;
+        .section {
+            padding: 20px;
+            text-transform: lowercase;
+            font-size: 20px;
+            color: #fff;
         }
-
-        /* Keyframes for the up-down slide animation */
-        @keyframes slide-down {
-            to {
-                transform: translateY(0);
-            }
-        }
-
-        /* Individual bar delays */
-        .bar:nth-child(1) {
-            background-color: #F7A600; /* files */
-            animation-delay: 0.6s;
-        }
-
-        .bar:nth-child(2) {
-            background-color: #FF5722; /* github */
-            animation-delay: 1.2s;
-        }
-
-        .bar:nth-child(3) {
-            background-color: #F44336; /* pgp key */
-            animation-delay: 1.8s;
-        }
-
-        .bar:nth-child(4) {
-            background-color: #E91E63; /* email */
-            animation-delay: 2.4s;
-        }
-
-        .bar:nth-child(5) {
-            animation-delay: 3s; /* No background, so it stays invisible */
-        }
-
-        /* Text Inside Bars */
-        .bar span {
-            position: absolute;
-            top: 50%;
-            left: 10px;
-            transform: translateY(-50%);
-            font-size: 1.2rem;
-            z-index: 2;
-        }
+        .files { background-color: #f9a825; }
+        .github { background-color: #ff5722; }
+        .pgp { background-color: #f44336; }
+        .email { background-color: #e91e63; }
+        .tools { background-color: #6a1b9a; }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <div class="header">
-        <h2>"sic itur ad astra"</h2>
-        <h1>1nf</h1>
+    <div class="container">
+        <div class="subtitle">"sic itur ad astra"</div>
+        <div class="title">silentskiess</div>
+        <div class="section files">files.</div>
+        <div class="section github">github.</div>
+        <div class="section pgp">pgp key.</div>
+        <div class="section email">email.</div>
+        <div class="section tools">tools.</div>
     </div>
+</body>
+</html>
 
-    <!-- Sliding Color Bars -->
-    <div class="bar"><span>files.</span></div>
-    <div class="bar"><span>github.</span></div>
-    <div class="bar"><span>pgp key.</span></div>
-    <div class="bar"><span>email.</span></div>
     <div class="bar"><span>tools</span></div>
 </body>
 </html>
