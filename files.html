@@ -15,6 +15,7 @@
             height: 100vh;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
         .house {
@@ -36,6 +37,25 @@
             border-bottom: 50px solid #c24a21;
         }
 
+        .home-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #c24a21;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #a6381a;
+        }
+
         .content {
             text-align: center;
             margin-top: 60px;
@@ -50,6 +70,9 @@
 </head>
 <body>
 
+    <!-- Home Button in Top Right Corner -->
+    <a href="https://silentskiess.online" class="home-button">Home</a>
+
     <!-- House Icon (Square with Triangle) -->
     <div class="house"></div>
 
@@ -59,4 +82,3 @@
     </div>
 </body>
 </html>
-
