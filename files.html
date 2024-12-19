@@ -1,81 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>silent | filesr</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #202020;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .house {
-            width: 100px;
-            height: 100px;
-            background-color: #c24a21;
-            position: relative;
-        }
-
-        .house::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            left: 0;
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 50px solid #c24a21;
-        }
-
-        .home-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            text-decoration: none;
-            color: white;
-            background-color: #c24a21;
-            padding: 6px 12px;
-            border: none;
-            border-radius: 5px;
-            font-size: 14px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .home-button:hover {
-            background-color: #a6381a;
-        }
-
-        .content {
-            text-align: center;
-            margin-top: 60px;
-        }
-
-        .no-files {
-            font-size: 24px;
-            margin-top: 20px;
-            color: #ccc;
-        }
-    </style>
+    <title>1nf's Notable Files</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Home Button in Top Right Corner -->
-    <a href="https://silentskiess.online" class="home-button">go back</a>
-
-    <!-- Main Content -->
-    <div class="content">
-        <div class="no-files">no files to display</div>
-    </div>
+    <header>
+        <h1>1nf's Notable Files</h1>
+        <button>X</button>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Filename</th>
+                    <th>Modified</th>
+                    <th>Size</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="4">No files found :(</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+td:nth-child(2), td:nth-child(3) {
+    text-align: center;
+}
