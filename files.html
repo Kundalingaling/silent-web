@@ -17,31 +17,23 @@
             align-items: center;
         }
 
-        .header {
-            width: 100%;
-            padding: 10px;
+        .house {
+            width: 100px;
+            height: 100px;
             background-color: #c24a21;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+            position: relative;
+        }
+
+        .house::before {
+            content: '';
             position: absolute;
-            top: 0;
-        }
-
-        .home-button {
-            text-decoration: none;
-            color: white;
-            background-color: #c24a21;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .home-button:hover {
-            background-color: #a6381a;
+            top: -50px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid #c24a21;
         }
 
         .content {
@@ -57,10 +49,9 @@
     </style>
 </head>
 <body>
-    <!-- Header with Home Button -->
-    <div class="header">
-        <a href="https://silentskiess.online" class="home-button">Home</a>
-    </div>
+
+    <!-- House Icon (Square with Triangle) -->
+    <div class="house"></div>
 
     <!-- Main Content -->
     <div class="content">
@@ -68,3 +59,4 @@
     </div>
 </body>
 </html>
+
