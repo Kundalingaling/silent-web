@@ -3,45 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juneish Style Website</title>
+    <title>silent - homepage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            font-size: 14px;
-            background-color: #f9f9f9;
+            background-color: #fdfcf9;
             color: #333;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('https://www.transparenttextures.com/patterns/notebook.png');
         }
 
         .container {
-            width: 90%;
-            max-width: 1200px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            width: 80%;
+            max-width: 900px;
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .header {
-            font-size: 20px;
-            font-weight: bold;
+            text-align: center;
         }
 
-        .sub-header {
-            font-size: 16px;
-            margin-top: 5px;
+        .header img {
+            width: 150px;
+            height: auto;
             margin-bottom: 20px;
         }
 
-        nav {
-            margin: 20px;
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .header p {
+            font-style: italic;
+            color: #555;
+        }
+
+        .updates {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            font-size: 0.9em;
+        }
+
+        .updates h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .updates ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .updates li {
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.8em;
+            margin-top: 20px;
+            color: #777;
+        }
+
+        .guestbook-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .guestbook-link a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .guestbook-link a:hover {
+            text-decoration: underline;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9em;
+            border-radius: 5px;
+        }
+
+        .buttons a:hover {
+            background: #555;
         }
     </style>
 </head>
 <body>
-<div></div>
+    <div class="container">
+        <div class="header">
+            <img src="https://via.placeholder.com/150" alt="Frog Illustration">
+            <h1>man im tired</h1>
+            <p>Welcome to my website</p>
+        </div>
+
+        <div class="content">
+            <p>hi there. I'm silent. Welcome to my website.</p>
+            <p>this place is my earnest attempt at creating an online space that feels like home. I'm trying to figure out what having an internet presence looks like without social media.</p>
+            <p>I'm not a coder, I don't know what I'm doing, but I'm trying my best. i am humbled by your presence here.</p>
+        </div>
+
+        <div class="updates">
+            <h2>Updates</h2>
+            <ul>
+                <li>15/20/24: started progress on this website.</li>
+            </ul>
+        </div>
+
+        <div class="guestbook-link">
+            <a href="#">See more!</a>
+        </div>
+
+        <div class="footer">
+            :3
+        </div>
+    </div>
+</body>
+</html>
+
