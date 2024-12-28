@@ -3,149 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>silent - homepage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
-<style>
-.p1 {
-  font-family: 'Cedarville Cursive', cursive;
-            background-color: #fff4d4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-            background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png");
+    <title>Is Silent Online?</title>
+    <script>
+        function checkTime() {
+            const now = new Date();
+
+            const hour = now.getHours();
+            const minutes = now.getMinutes();
+
+            // Calculate current time in minutes since midnight
+            const currentMinutes = hour * 60 + minutes;
+
+            // Time ranges in minutes since midnight
+            const threePM = 15 * 60; // 3:00 PM
+            const ninePM = 21 * 60; // 9:00 PM
+
+            let message;
+
+            if (currentMinutes >= threePM && currentMinutes < ninePM) {
+                message = "I am online! If not, something might have happened but you don't need to worry!"; // Past 3:00 PM but before 9:00 PM
+            } else {
+                message = "I'm not here!";
+            }
+
+            document.getElementById("timeOutput").innerText = message;
         }
 
-        .container {
-            width: 80%;
-            max-width: 900px;
-            background: white;
-            padding: 20px;
-            border: 1px solid #ddd;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .header {
-            text-align: center;
-        }
-
-        .header img {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-
-        .header p {
-            font-style: italic;
-            color: #555;
-        }
-
-        .updates {
-            margin: 20px 0;
-            padding: 15px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-            font-size: 0.9em;
-        }
-
-        .updates h2 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        .updates ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .updates li {
-            margin-bottom: 5px;
-        }
-
-        .footer {
-            text-align: center;
-            font-size: 0.8em;
-            margin-top: 20px;
-            color: #777;
-        }
-
-        .guestbook-link {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .guestbook-link a {
-            color: #007BFF;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .guestbook-link a:hover {
-            text-decoration: underline;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .buttons a {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #333;
-            color: white;
-            text-decoration: none;
-            font-size: 0.9em;
-            border-radius: 5px;
-        }
-
-        .buttons a:hover {
-            background: #555;
-        }
-    </style>
+        window.onload = checkTime;
+    </script>
 </head>
 <body>
-    <div class="thisthing">
-        <div class="hi">
-            <img src="https://i.imgur.com/Dpul0aN.png" alt="your wifi is buns">
-            <h1>silentskiess</h1>
-            <p></p>
-        </div>
-
-        <div class="bioandstuff">
-            <p class="p1">dis silent</p>
-            <p class="p1">this is my honest attempt of trying to make a website from scratch.</p>
-            <p class="p1">i dont know what's happening. i am suprised you even read this.</p>
-        </div>
-
-        <div class="updats">
-            <p class="p1">updates</p>
-            <ul>
-                <p class="p1">15/20/24: started progress on this website.</p>
-            </ul>
-        </div>
-
-        <div class="links">
-            <a href="scraps">scraps</a>
-        </div>
-
-        <div class="footer">
-            pfp by me
-        </div>
-    </div>
+    <h1 id="timeOutput"></h1>
 </body>
 </html>
-
